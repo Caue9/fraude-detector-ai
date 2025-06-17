@@ -71,7 +71,7 @@ window.onload = function() {
     });
 };
 
-const csvURL = "teste";
+const csvURL = "https://raw.githubusercontent.com/Caue9/fraude-detector-ai/refs/heads/main/data/resultados_predicoesV2.csv";
 
 function carregarTransacoesDoGithub() {
     Papa.parse(csvURL, {
