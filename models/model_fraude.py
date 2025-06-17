@@ -15,7 +15,7 @@ perc_fraudes = 100 * total_fraudes / len(df)
 print(f'Total de fraudes no dataset: {total_fraudes} ({perc_fraudes:.2f}%)')
 
 if perc_fraudes < 5:
-    print("⚠️  Poucas fraudes no dataset! Tente gerar um CSV com pelo menos 5-10% de fraudes para testes mais realistas.")
+    print("Identificado poucas fraudes, possivel modelo falho.")
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
@@ -40,6 +40,6 @@ print(f'F1-score: {f1:.2f}')
 results = X_test.copy()
 results['fraude_real'] = y_test.values
 results['fraude_predita'] = y_pred
-results.to_csv('../data/resultados_predicoes.csv', index=False)
+results.to_csv('../data/resultados_predicoesV2.csv', index=False)
 
 print('Fraudes no conjunto de teste:', int(y_test.sum()))
