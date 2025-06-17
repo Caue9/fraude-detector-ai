@@ -6,8 +6,8 @@ from faker import Faker
 fake = Faker('pt_BR')
 np.random.seed(42)
 
-n = 1000
-percentual_fraude = 0.10
+n = 10000
+percentual_fraude = 0.25
 
 ids = np.arange(1, n + 1)
 
