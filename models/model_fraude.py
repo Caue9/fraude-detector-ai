@@ -10,13 +10,7 @@ features = ['valor', 'score_risco']
 X = df[features]
 y = df['fraude']
 
-total_fraudes = int(df['fraude'].sum())
-perc_fraudes = 100 * total_fraudes / len(df)
-print(f'Total de fraudes no dataset: {total_fraudes} ({perc_fraudes:.2f}%)')
-
-if perc_fraudes < 5:
-    print("Identificado poucas fraudes, possivel modelo falho.")
-
+# Train/Test
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
@@ -37,9 +31,17 @@ print(f'Precision: {prec:.2f}')
 print(f'Recall: {rec:.2f}')
 print(f'F1-score: {f1:.2f}')
 
-results = X_test.copy()
+indices_teste = X_test.index
+
+extras = df.loc[indices_teste, ['id_transacao', 'localizacao', 'dispositivo']].reset_index(drop=True)
+
+results = extras.copy()
+results['valor'] = X_test['valor'].values
+results['score_risco'] = X_test['score_risco'].values
 results['fraude_real'] = y_test.values
 results['fraude_predita'] = y_pred
-results.to_csv('../data/resultados_predicoesV2.csv', index=False)
 
-print('Fraudes no conjunto de teste:', int(y_test.sum()))
+results.to_csv('../data/resultados_predicoes.csv', index=False)
+
+print('Arquivo de resultados salvo com sucesso!')
+print(results.head())

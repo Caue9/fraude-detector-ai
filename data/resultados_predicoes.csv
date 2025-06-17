@@ -1,0 +1,201 @@
+id_transacao,localizacao,dispositivo,valor,score_risco,fraude_real,fraude_predita
+275,Londres,Desktop,2864.37,0.4,0,0
+859,Curitiba,Mobile,3328.18,0.2,0,0
+56,Rio de Janeiro,Mobile,58214.23162579274,0.49,1,1
+370,Londres,Mobile,287.54,0.39,0,0
+304,São Paulo,Desktop,4058.15,0.25,0,0
+852,Rio de Janeiro,Mobile,5544.55,0.03,0,1
+346,Rio de Janeiro,Mobile,3826.89,0.2,0,0
+486,Rio de Janeiro,Mobile,9256.93,0.35,0,0
+533,Rio de Janeiro,Tablet,22779.49,0.37,0,1
+422,São Paulo,Mobile,6235.32,0.13,0,0
+332,Londres,Desktop,5672.73,0.35,0,0
+180,Curitiba,Tablet,591.78,0.12,0,0
+811,Londres,Mobile,16756.7,0.51,1,1
+489,Londres,Mobile,12015.98,0.5,1,0
+952,Rio de Janeiro,Desktop,4374.94,0.23,0,0
+273,Nova York,Mobile,8071.8,0.44,0,0
+144,Tóquio,Mobile,1431.72,0.32,0,0
+150,Curitiba,Mobile,1306.5,0.08,0,0
+881,Nova York,Desktop,1051.05,0.42,0,0
+834,Tóquio,Desktop,776.22,0.45,0,0
+386,Tóquio,Desktop,6507.98,0.51,1,0
+113,Nova York,Desktop,10619.8,0.51,1,0
+442,Rio de Janeiro,Tablet,17261.83,0.27,0,1
+377,São Paulo,Mobile,7454.1,0.06,0,1
+813,São Paulo,Tablet,532.58,0.11,0,0
+527,São Paulo,Tablet,2143.34,0.12,0,0
+634,Nova York,Mobile,3038.12,0.33,0,0
+818,Nova York,Mobile,2036.66,0.29,0,0
+538,Tóquio,Mobile,1136.61,0.4,0,0
+860,Londres,Desktop,271.87,0.36,0,0
+6,Nova York,Tablet,678.39,0.21,0,0
+305,Tóquio,Mobile,5179.84,0.35,0,0
+176,Curitiba,Desktop,766.42,0.28,0,0
+385,São Paulo,Mobile,5313.17,0.1,0,0
+626,São Paulo,Mobile,1841.25,0.17,0,0
+633,Tóquio,Mobile,2867.12,0.23,0,0
+690,São Paulo,Mobile,828.31,0.15,0,0
+194,Nova York,Desktop,4010.68,0.5,1,0
+824,Londres,Tablet,2031.11,0.26,0,0
+429,São Paulo,Desktop,1728.77,0.26,0,0
+782,Nova York,Mobile,3129.88,0.37,0,0
+934,Tóquio,Mobile,2983.58,0.31,0,0
+383,Londres,Mobile,3965.6,0.38,0,0
+285,Rio de Janeiro,Desktop,3453.66,0.32,0,0
+687,Tóquio,Desktop,3390.91,0.45,0,0
+574,São Paulo,Tablet,3892.36,0.11,0,0
+465,Curitiba,Mobile,13098.88,0.39,0,0
+636,Curitiba,Mobile,2372.57,0.02,0,0
+924,Nova York,Mobile,6434.86,0.36,0,0
+882,São Paulo,Desktop,4457.66,0.3,0,0
+245,Rio de Janeiro,Mobile,62.31,0.07,0,0
+568,Nova York,Mobile,2301.28,0.22,0,0
+217,Tóquio,Mobile,1574.54,0.36,0,0
+632,Curitiba,Desktop,9023.07,0.34,0,0
+39,Tóquio,Mobile,4611.0,0.4,0,0
+508,Nova York,Desktop,6915.98,0.5,1,0
+522,Londres,Mobile,1917.89,0.36,0,0
+241,Rio de Janeiro,Desktop,11284.33,0.42,0,0
+431,Nova York,Mobile,617.23,0.24,0,0
+967,Londres,Tablet,5078.26,0.36,0,0
+515,Nova York,Desktop,185.09,0.32,0,0
+761,Londres,Mobile,657.97,0.36,0,0
+942,Tóquio,Desktop,3231.34,0.44,0,0
+231,Curitiba,Tablet,6335.3,0.17,0,0
+213,Curitiba,Mobile,4221.77,0.14,0,0
+116,Curitiba,Desktop,8206.08,0.31,0,0
+815,Curitiba,Desktop,75276.83811140891,0.77,1,1
+460,Londres,Mobile,505.96,0.36,0,0
+423,Rio de Janeiro,Mobile,382.55,0.17,0,0
+182,Rio de Janeiro,Mobile,481.78,0.18,0,0
+353,São Paulo,Mobile,4299.9,0.04,0,0
+935,Rio de Janeiro,Mobile,753.42,0.19,0,0
+975,Tóquio,Mobile,126.72,0.33,0,0
+665,Londres,Mobile,429.37,0.27,0,0
+572,Rio de Janeiro,Desktop,6123.49,0.16,0,0
+52,Nova York,Mobile,5968.98,0.26,0,0
+979,Londres,Desktop,2743.62,0.38,0,0
+110,Londres,Mobile,320.42,0.33,0,0
+537,Londres,Mobile,7579.09,0.24,0,0
+627,Nova York,Mobile,2483.56,0.23,0,0
+539,Rio de Janeiro,Desktop,2395.31,0.25,0,0
+992,Rio de Janeiro,Mobile,4745.8,0.05,0,0
+243,Nova York,Mobile,9854.04,0.42,0,0
+807,Rio de Janeiro,Mobile,10894.71,0.36,0,0
+408,Tóquio,Mobile,43.59,0.32,0,0
+17,Rio de Janeiro,Mobile,1451.01,0.04,0,0
+608,São Paulo,Mobile,1811.92,0.13,0,0
+192,Tóquio,Mobile,9100.49,0.44,0,0
+720,Tóquio,Mobile,5250.21,0.34,0,0
+31,Rio de Janeiro,Desktop,3741.33,0.28,0,0
+624,Tóquio,Mobile,2650.65,0.22,0,0
+183,Londres,Mobile,10344.76,0.52,1,0
+808,Rio de Janeiro,Mobile,10391.5,0.26,0,0
+416,São Paulo,Desktop,2380.06,0.29,0,0
+146,Nova York,Mobile,150.34,0.24,0,0
+286,Tóquio,Desktop,146.42,0.5,1,1
+586,Nova York,Desktop,1098.51,0.31,0,0
+276,Londres,Desktop,2784.74,0.46,0,0
+740,São Paulo,Desktop,1892.48,0.22,0,0
+490,Nova York,Mobile,8838.7,0.51,1,0
+885,Rio de Janeiro,Desktop,6436.07,0.26,0,0
+520,Londres,Desktop,652.04,0.46,0,0
+103,São Paulo,Desktop,1509.59,0.21,0,0
+555,Rio de Janeiro,Tablet,8371.03,0.32,0,0
+781,Curitiba,Mobile,4736.01,0.11,0,0
+78,Nova York,Mobile,307.72,0.25,0,0
+826,Tóquio,Mobile,10095.7,0.56,1,0
+227,São Paulo,Mobile,14449.24,0.4,0,0
+87,São Paulo,Mobile,5231.5,0.06,0,0
+308,Rio de Janeiro,Mobile,1560.08,0.1,0,0
+99,Rio de Janeiro,Mobile,102.99,0.04,0,0
+69,Nova York,Tablet,309.9,0.27,0,0
+725,Curitiba,Mobile,3417.71,0.06,0,0
+234,Nova York,Desktop,2713.17,0.49,1,0
+514,Tóquio,Mobile,8041.57,0.39,0,0
+106,São Paulo,Mobile,1146.96,0.16,0,0
+44,Rio de Janeiro,Mobile,9601.69,0.24,0,0
+311,Tóquio,Mobile,2311.93,0.25,0,0
+997,Curitiba,Mobile,9970.8,0.2,0,0
+835,Tóquio,Mobile,2759.55,0.22,0,0
+578,Londres,Desktop,10446.65,0.63,1,1
+137,Rio de Janeiro,Mobile,2925.81,0.03,0,0
+566,Tóquio,Mobile,3565.59,0.29,0,0
+618,Tóquio,Desktop,1296.71,0.47,1,0
+413,São Paulo,Mobile,108452.52509215983,0.8,1,1
+379,Tóquio,Mobile,6738.12,0.3,0,0
+956,Londres,Mobile,1932.44,0.33,0,0
+590,Tóquio,Mobile,659.04,0.28,0,0
+437,Tóquio,Desktop,302.18,0.43,0,0
+434,Nova York,Mobile,426.43,0.32,0,0
+772,Curitiba,Desktop,7494.98,0.33,0,0
+645,Nova York,Mobile,510.25,0.4,0,0
+635,Nova York,Mobile,453.45,0.35,0,0
+742,São Paulo,Mobile,1434.58,0.09,0,0
+274,Tóquio,Mobile,9778.46,0.55,1,0
+724,São Paulo,Tablet,5405.57,0.22,0,0
+866,Curitiba,Desktop,3280.65,0.25,0,0
+810,Nova York,Mobile,480.71,0.32,0,0
+780,Nova York,Mobile,4099.38,0.25,0,0
+802,Londres,Tablet,662.04,0.32,0,0
+71,Curitiba,Desktop,5917.94,0.17,0,0
+637,Nova York,Mobile,3042.43,0.35,0,0
+16,Nova York,Desktop,810.45,0.32,0,0
+107,São Paulo,Mobile,2113.13,0.02,0,0
+95,Tóquio,Mobile,5895.56,0.25,0,0
+552,Rio de Janeiro,Desktop,7647.08,0.14,0,0
+646,Rio de Janeiro,Tablet,8848.32,0.25,0,0
+910,São Paulo,Desktop,1910.16,0.24,0,0
+477,Curitiba,Desktop,306.65,0.2,0,0
+93,Curitiba,Mobile,5721.57,0.05,0,0
+518,Londres,Mobile,6654.59,0.27,0,0
+351,Curitiba,Mobile,2797.76,0.03,0,0
+879,Tóquio,Mobile,1133.656693229251,0.36,0,0
+784,São Paulo,Desktop,1696.73,0.13,0,0
+261,Nova York,Mobile,3818.12,0.22,0,0
+59,Rio de Janeiro,Desktop,185.13,0.1,0,0
+215,Nova York,Desktop,4981.67,0.46,0,0
+115,Nova York,Tablet,4013.98,0.33,0,0
+447,São Paulo,Mobile,17075.1,0.27,0,1
+614,São Paulo,Mobile,341.18,0.07,0,0
+554,Tóquio,Mobile,3292.46,0.36,0,0
+277,Londres,Desktop,6403.8,0.41,0,0
+155,Curitiba,Mobile,16976.15,0.24,0,1
+38,São Paulo,Mobile,411.11,0.19,0,0
+436,Rio de Janeiro,Mobile,4828.83,0.12,0,0
+861,Rio de Janeiro,Desktop,5976.01,0.18,0,0
+764,Rio de Janeiro,Desktop,5449.47,0.28,0,0
+181,São Paulo,Mobile,1668.53,0.14,0,0
+287,São Paulo,Mobile,2506.43,0.14,0,0
+783,Londres,Mobile,1160.33,0.39,0,0
+36,Curitiba,Mobile,6609.33,0.1,0,0
+862,São Paulo,Desktop,2415.34,0.19,0,0
+897,Tóquio,Tablet,1387.73,0.21,0,0
+324,Tóquio,Mobile,1313.65,0.26,0,0
+675,Rio de Janeiro,Desktop,2113.22,0.19,0,0
+873,Nova York,Desktop,4131.29,0.37,0,0
+23,Rio de Janeiro,Tablet,1382.06,0.06,0,0
+3,Curitiba,Mobile,5266.98,0.03,0,1
+754,Tóquio,Mobile,1631.31,0.21,0,0
+24,Tóquio,Desktop,1825.11,0.37,0,0
+188,Curitiba,Mobile,3240.53,0.07,0,0
+226,Nova York,Mobile,1118.8,0.21,0,0
+232,Tóquio,Mobile,2793.74,0.28,0,0
+65,Rio de Janeiro,Mobile,1319.21,0.01,0,1
+837,Tóquio,Mobile,9853.17,0.49,1,0
+996,São Paulo,Desktop,384.2,0.15,0,0
+732,Nova York,Mobile,6740.41,0.38,0,0
+851,Londres,Desktop,2409.734891261467,0.32,0,0
+865,São Paulo,Mobile,2048.39,0.18,0,0
+499,Tóquio,Mobile,14659.84,0.53,1,1
+452,Tóquio,Mobile,3269.44,0.33,0,0
+391,Nova York,Mobile,18628.02,0.56,1,1
+649,Tóquio,Desktop,6226.84,0.4,0,0
+547,Nova York,Tablet,482.16,0.38,0,0
+896,Londres,Mobile,917.57,0.36,0,0
+521,Londres,Mobile,3606.9,0.3,0,0
+562,Tóquio,Desktop,957.93,0.37,0,0
+768,Rio de Janeiro,Mobile,8374.67,0.31,0,0
+638,São Paulo,Mobile,1110.77,0.11,0,0
+809,São Paulo,Mobile,2397.46,0.02,0,0
