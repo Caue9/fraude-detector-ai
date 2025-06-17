@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Antifraude</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="login-container" id="login-section">
+        <div class="login-box">
+            <h2>Sistema Antifraude</h2>
+            <form id="login-form">
+                <input type="text" id="user" placeholder="Usuário" required>
+                <input type="password" id="pass" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <span class="login-error" id="login-error"></span>
+        </div>
+    </div>
+    
+    
+    <div class="main-app" id="app-section" style="display:none;">
+        <aside class="sidebar">
+            <h3>Antifraude</h3>
+            <nav>
+                <ul>
+                    <li class="active" data-section="dashboard">Dashboard</li>
+                    <li data-section="transacoes">Transações</li>
+                    <li data-section="logout">Sair</li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            
+            <section id="dashboard-section" class="active-section">
+                <h2>Visão Geral</h2>
+                <div class="kpis">
+                    <div class="kpi">
+                        <span>1.000</span>
+                        <label>Transações analisadas</label>
+                    </div>
+                    <div class="kpi">
+                        <span>90</span>
+                        <label>Fraudes reais</label>
+                    </div>
+                    <div class="kpi">
+                        <span>53</span>
+                        <label>Fraudes detectadas</label>
+                    </div>
+                    <div class="kpi">
+                        <span>0,58</span>
+                        <label>Precisão</label>
+                    </div>
+                    <div class="kpi">
+                        <span>0,39</span>
+                        <label>Recall</label>
+                    </div>
+                </div>
+                <div class="charts">
+                    <div class="chart">
+                        <h4>Fraudes Detectadas vs Reais</h4>
+                        <canvas id="barChart" width="350" height="230"></canvas>
+                    </div>
+                    <div class="chart">
+                        <h4>Distribuição de Previsão</h4>
+                        <canvas id="pieChart" width="230" height="230"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="transacoes-section" style="display:none;">
+                <h2>Transações Suspeitas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Valor (R$)</th>
+                            <th>Localização</th>
+                            <th>Dispositivo</th>
+                            <th>Score de Risco</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fraude">
+                            <td>453</td>
+                            <td>8.700,00</td>
+                            <td>Londres</td>
+                            <td>Desktop</td>
+                            <td>0,92</td>
+                            <td>FRAUDE</td>
+                        </tr>
+                        <tr class="fraude">
+                            <td>207</td>
+                            <td>7.500,00</td>
+                            <td>Nova York</td>
+                            <td>Tablet</td>
+                            <td>0,88</td>
+                            <td>FRAUDE</td>
+                        </tr>
+                        <tr>
+                            <td>841</td>
+                            <td>2.300,00</td>
+                            <td>São Paulo</td>
+                            <td>Mobile</td>
+                            <td>0,44</td>
+                            <td>Legítima</td>
+                        </tr>
+                        <tr class="fraude">
+                            <td>309</td>
+                            <td>6.150,00</td>
+                            <td>Tóquio</td>
+                            <td>Desktop</td>
+                            <td>0,86</td>
+                            <td>FRAUDE</td>
+                        </tr>
+                        <tr>
+                            <td>728</td>
+                            <td>1.700,00</td>
+                            <td>Curitiba</td>
+                            <td>Mobile</td>
+                            <td>0,30</td>
+                            <td>Legítima</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
