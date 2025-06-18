@@ -2,75 +2,73 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard Antifraude</title>
+    <title>Dashboard de eficiência IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    
-    <div class="login-container" id="login-section">
-        <div class="login-box">
-            <h2>Sistema Antifraude</h2>
-            <form id="login-form">
-                <input type="text" id="user" placeholder="Usuário" required>
-                <input type="password" id="pass" placeholder="Senha" required>
-                <button type="submit">Entrar</button>
-            </form>
+
+    <div id="login-section" class="login-container">
+        <form class="login-box" id="login-form" autocomplete="off">
+            <h2>Dashbord Antifraude</h2>
+            <input type="text" id="user" placeholder="Usuário" required autofocus>
+            <input type="password" id="pass" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
             <span class="login-error" id="login-error"></span>
-        </div>
+        </form>
     </div>
-    
-    
-    <div class="main-app" id="app-section" style="display:none;">
+
+
+    <div id="app-section" class="main-app" style="display:none;">
         <aside class="sidebar">
-            <h3>Antifraude</h3>
+            <h3>IA Antifraude</h3>
             <nav>
                 <ul>
-                    <li class="active" data-section="dashboard">Dashboard</li>
-                    <li data-section="transacoes">Transações</li>
+                    <li class="active" data-section="dashboard-section">Visão Geral</li>
+                    <li data-section="transacoes-section">Transações</li>
                     <li data-section="logout">Sair</li>
                 </ul>
             </nav>
         </aside>
         <main class="content">
-            
-            <section id="dashboard-section" class="active-section">
-                <h2>Visão Geral</h2>
+
+            <section id="dashboard-section" class="fade-in-section active-section">
+                <h1>Dashboard eficiência</h1>
                 <div class="kpis">
-                    <div class="kpi">
-                        <span>1.000</span>
-                        <label>Transações analisadas</label>
-                    </div>
-                    <div class="kpi">
-                        <span>90</span>
-                        <label>Fraudes reais</label>
-                    </div>
-                    <div class="kpi">
-                        <span>53</span>
-                        <label>Fraudes detectadas</label>
-                    </div>
-                    <div class="kpi">
-                        <span>0,58</span>
-                        <label>Precisão</label>
-                    </div>
-                    <div class="kpi">
-                        <span>0,39</span>
-                        <label>Recall</label>
-                    </div>
+                    <div class="kpi"><span id="kpi-total">...</span><label>Transações analisadas</label></div>
+                    <div class="kpi"><span id="kpi-fraudes-reais">...</span><label>Fraudes reais</label></div>
+                    <div class="kpi"><span id="kpi-fraudes-detectadas">...</span><label>Fraudes detectadas</label></div>
+                    <div class="kpi"><span id="kpi-precisao">...</span><label>Precisão</label></div>
+                    <div class="kpi"><span id="kpi-recall">...</span><label>Recall</label></div>
                 </div>
-                <div class="charts">
+                <div class="charts" style="flex-wrap:wrap;">
                     <div class="chart">
-                        <h4>Fraudes Detectadas vs Reais</h4>
-                        <canvas id="barChart" width="350" height="230"></canvas>
+                        <h4>Fraudes Detectadas vs Reais <span title="Comparativo entre fraudes reais e fraudes detectadas">&#9432;</span></h4>
+                        <canvas id="barChart" width="330" height="220"></canvas>
                     </div>
                     <div class="chart">
-                        <h4>Distribuição de Previsão</h4>
-                        <canvas id="pieChart" width="230" height="230"></canvas>
+                        <h4>Distribuição de Previsão <span title="Mostra o percentual de transações legítimas e fraudes detectadas">&#9432;</span></h4>
+                        <canvas id="pieChart" width="220" height="220"></canvas>
+                    </div>
+                    <div class="chart">
+                        <h4>Fraudes por Localização <span title="Total de fraudes detectadas por local (cidade/estado)">&rarr;</span></h4>
+                        <canvas id="fraudeLocalChart" width="350" height="220"></canvas>
+                    </div>
+                    <div class="chart">
+                        <h4>Transações por Dispositivo <span title="Proporção de fraudes por tipo de dispositivo">&#9432;</span></h4>
+                        <canvas id="dispositivoChart" width="220" height="220"></canvas>
+                    </div>
+                    <div class="chart">
+                        <h4>Distribuição de Valores (R$) <span title="Histograma de valores das transações">&#9432;</span></h4>
+                        <canvas id="valorChart" width="350" height="220"></canvas>
                     </div>
                 </div>
             </section>
-            
-            <section id="transacoes-section" style="display:none;">
-                <h2>Transações Suspeitas</h2>
+
+            <section id="transacoes-section" class="fade-in-section" style="display:none;">
+                <h2>Transações</h2>
                 <table>
                     <thead>
                         <tr>
@@ -82,54 +80,16 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="fraude">
-                            <td>453</td>
-                            <td>8.700,00</td>
-                            <td>Londres</td>
-                            <td>Desktop</td>
-                            <td>0,92</td>
-                            <td>FRAUDE</td>
-                        </tr>
-                        <tr class="fraude">
-                            <td>207</td>
-                            <td>7.500,00</td>
-                            <td>Nova York</td>
-                            <td>Tablet</td>
-                            <td>0,88</td>
-                            <td>FRAUDE</td>
-                        </tr>
-                        <tr>
-                            <td>841</td>
-                            <td>2.300,00</td>
-                            <td>São Paulo</td>
-                            <td>Mobile</td>
-                            <td>0,44</td>
-                            <td>Legítima</td>
-                        </tr>
-                        <tr class="fraude">
-                            <td>309</td>
-                            <td>6.150,00</td>
-                            <td>Tóquio</td>
-                            <td>Desktop</td>
-                            <td>0,86</td>
-                            <td>FRAUDE</td>
-                        </tr>
-                        <tr>
-                            <td>728</td>
-                            <td>1.700,00</td>
-                            <td>Curitiba</td>
-                            <td>Mobile</td>
-                            <td>0,30</td>
-                            <td>Legítima</td>
-                        </tr>
+                    <tbody id="tbody-transacoes">
+                        <tr><td colspan="6">Carregando...</td></tr>
                     </tbody>
                 </table>
             </section>
         </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <footer>
+        <p>Protótipo — Sistema Antifraude UNINOVE • <span style="color:#1976D2;">by Cauê</span></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

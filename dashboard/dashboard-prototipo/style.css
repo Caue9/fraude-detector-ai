@@ -2,98 +2,114 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #eef1f7;
     margin: 0;
+    min-height: 100vh;
 }
-
 .login-container {
     height: 100vh;
+    width: 100vw;
+    background: linear-gradient(120deg,#1976d2 0%, #33bfff 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #1b2536;
+    transition: opacity 0.5s;
 }
-
 .login-box {
     background: #fff;
-    border-radius: 12px;
-    padding: 2.5rem 2rem;
-    box-shadow: 0 4px 16px #0002;
+    border-radius: 18px;
+    padding: 2.5rem 2rem 2rem 2rem;
+    box-shadow: 0 6px 32px #1976d228;
     text-align: center;
-    min-width: 330px;
+    min-width: 340px;
+    animation: popin 0.9s cubic-bezier(.41,-0.02,.57,1.33);
 }
-.login-box h2 {
-    color: #1976D2;
-    margin-bottom: 1.5rem;
+@keyframes popin {
+    0% {transform: scale(0.9) translateY(40px); opacity:0;}
+    80% {transform: scale(1.03);}
+    100% {transform: scale(1) translateY(0); opacity:1;}
 }
+.login-box h2 { color: #1976D2; margin-bottom: 1.6rem; letter-spacing:1px;}
 .login-box input {
     width: 90%;
     padding: 0.7rem;
     margin: 0.7rem 0;
     border: 1px solid #b8bfd2;
     border-radius: 7px;
-    font-size: 1rem;
+    font-size: 1.07rem;
+    outline-color: #1976D2;
+    transition: border .2s;
 }
 .login-box button {
     width: 100%;
     padding: 0.8rem;
     margin-top: 1rem;
-    background: #1976D2;
+    background: linear-gradient(90deg,#1976D2,#33bfff 90%);
     color: #fff;
     border: none;
     border-radius: 7px;
-    font-size: 1.1rem;
+    font-size: 1.13rem;
     cursor: pointer;
-    transition: background 0.18s;
+    transition: background 0.18s,transform .1s;
+    font-weight:600;
 }
-.login-box button:hover {
-    background: #174EA6;
-}
-.login-error {
-    color: #d32f2f;
-    margin-top: 1rem;
-    display: block;
-    font-size: 0.96rem;
-}
-.main-app {
-    display: flex;
-    min-height: 100vh;
-}
+.login-box button:hover {background:#1976D2;transform:scale(1.04);}
+.login-error {color:#d32f2f;margin-top:1rem;display:block;font-size:1rem;min-height:24px;}
+.main-app { display: flex; min-height: 100vh; transition: opacity .6s;}
 .sidebar {
-    background: #1b2536;
+    background: linear-gradient(150deg, #1b2536 90%, #1976D2 120%);
     color: #fff;
     min-width: 210px;
     padding: 2rem 0.6rem;
-    box-shadow: 2px 0 8px #0001;
+    box-shadow: 2px 0 8px #1976d211;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: sidebar-in 0.8s;
+}
+@keyframes sidebar-in {
+    0% {transform: translateX(-60px); opacity:0;}
+    100%{transform:translateX(0); opacity:1;}
 }
 .sidebar h3 {
     margin: 0 0 2rem 0;
     text-align: center;
-    letter-spacing: 1px;
     font-weight: 700;
+    font-size: 1.38rem;
+    letter-spacing: 1.5px;
 }
 .sidebar nav ul {
     list-style: none;
     padding: 0;
+    width: 100%;
 }
 .sidebar nav ul li {
-    padding: 0.9rem 1.1rem;
-    margin-bottom: 0.5rem;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.7rem;
     border-radius: 7px;
     cursor: pointer;
-    transition: background 0.14s;
+    transition: background 0.16s, transform .11s;
+    font-size: 1.08rem;
+    letter-spacing: .3px;
+    text-align:left;
 }
 .sidebar nav ul li.active, .sidebar nav ul li:hover {
     background: #1976D2;
     color: #fff;
+    transform: scale(1.03);
 }
 .content {
     flex: 1;
     padding: 2.5rem 2.5rem;
     background: #f8fafc;
+    animation: content-in 0.7s;
+}
+@keyframes content-in {
+    0% {transform:translateY(40px);opacity:0;}
+    100%{transform:translateY(0);opacity:1;}
 }
 .kpis {
     display: flex;
-    gap: 1.2rem;
-    margin-bottom: 2.3rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 .kpi {
@@ -101,9 +117,15 @@ body {
     border-radius: 1rem;
     padding: 1.2rem 1rem;
     text-align: center;
-    box-shadow: 0 2px 8px #1976d211;
-    min-width: 140px;
+    min-width: 135px;
     flex: 1;
+    box-shadow: 0 2px 8px #1976d211;
+    opacity:0;
+    animation: fadein 1.3s .2s forwards;
+}
+@keyframes fadein {
+    0% {opacity:0;}
+    100%{opacity:1;}
 }
 .kpi span {
     display: block;
@@ -119,13 +141,16 @@ body {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
 }
 .chart {
     background: #fff;
     border-radius: 1rem;
     padding: 1.2rem;
     box-shadow: 0 2px 8px #1976d210;
+    min-width: 220px;
+    opacity: 0;
+    animation: fadein 1.2s .4s forwards;
 }
 .chart h4 {
     margin-bottom: 1rem;
@@ -156,9 +181,25 @@ tr.fraude {
     background: #fff2f0;
     color: #d32f2f;
     font-weight: 600;
+    transition: background 0.2s;
 }
-@media (max-width: 900px) {
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.45s, transform 0.45s;
+}
+.active-section {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.55s, transform 0.6s;
+}
+footer {
+    text-align: center;
+    margin: 2rem 0 0 0;
+    color: #5c6370;
+}
+@media (max-width: 950px) {
     .kpis, .charts { flex-direction: column; }
-    .sidebar { min-width: 80px; padding: 1rem 0.2rem;}
-    .content { padding: 1rem;}
+    .sidebar { min-width: 70px; padding: 1rem 0.2rem;}
+    .content { padding: 1.1rem;}
 }
